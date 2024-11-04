@@ -1,0 +1,78 @@
+{
+  "styles": {
+    "global": {
+      "boxSizing": "border-box",
+      "fontFamily": "Open Sans"
+    },
+    "body": {
+      "background": "linear-gradient(#9b58d1, #ae91c5)",
+      "height": "100vh",
+      "display": "flex",
+      "justifyContent": "center",
+      "alignItems": "center"
+    },
+    "section": {
+      "width": 500,
+      "backgroundColor": "#fff",
+      "border": "7px solid #ae91c5",
+      "color": "#000",
+      "padding": 7
+    },
+    "h2": {
+      "borderBottom": "1px solid #9b58d1",
+      "textAlign": "center",
+      "paddingBottom": 5
+    },
+    "palabra": {
+      "display": "flex",
+      "justifyContent": "center",
+      "marginVertical": 40
+    },
+    "letra": {
+      "height": 50,
+      "width": 50,
+      "border": "2px solid #9b58d1",
+      "textAlign": "center",
+      "margin": 4,
+      "fontWeight": "600",
+      "fontSize": 30
+    },
+    "pintar": {
+      "backgroundColor": "#02bfa4"
+    },
+    "pintarError": {
+      "backgroundColor": "red"
+    },
+    "h3": {
+      "marginVertical": 4,
+      "fontWeight": "normal",
+      "fontSize": 16
+    },
+    "h3Span": {
+      "fontStyle": "italic",
+      "fontWeight": "bold",
+      "fontSize": 20
+    },
+    "button": {
+      "display": "block",
+      "width": "fit-content",
+      "margin": "auto",
+      "backgroundColor": "#02bfa4",
+      "border": "2px solid #02bfa4",
+      "borderRadius": 20,
+      "color": "#fff",
+      "fontWeight": "bold",
+      "fontSize": 15,
+      "padding": 10,
+      "marginTop": 30,
+      "cursor": "pointer",
+      "transition": "0.5s"
+    },
+    "buttonHover": {
+      "backgroundColor": "#02bfa4"
+    }
+  },
+  "fonts": {
+    "import": "https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap"
+  }
+}

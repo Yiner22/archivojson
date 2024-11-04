@@ -1,0 +1,55 @@
+{
+  "page": {
+    "title": "Adivina la Palabra",
+    "styles": ["estilo.css"],
+    "sections": [
+      {
+        "type": "text",
+        "variant": "title",
+        "content": "Adivina la Palabra"
+      },
+      {
+        "type": "word",
+        "id": "palabra",
+        "letters": [
+          { "char": "G", "highlight": true },
+          { "char": "U", "highlight": false },
+          { "char": "I", "highlight": false },
+          { "char": "T", "highlight": false },
+          { "char": "A", "highlight": false },
+          { "char": "R", "highlight": false },
+          { "char": "R", "highlight": false },
+          { "char": "A", "highlight": false }
+        ]
+      },
+      {
+        "type": "text",
+        "variant": "subtitle",
+        "content": "Ayuda: Instrumento Musical"
+      },
+      {
+        "type": "text",
+        "variant": "subtitle",
+        "content": "Intentos restantes: 5",
+        "id": "intentos"
+      },
+      {
+        "type": "text",
+        "variant": "subtitle",
+        "content": "Letras ingresadas:",
+        "id": "letrasIngresadas"
+      },
+      {
+        "type": "button",
+        "action": "cargarNuevaPalabra",
+        "label": "Nueva Palabra"
+      },
+      {
+        "type": "text",
+        "variant": "footer",
+        "content": "Realizado por Yiner Alfredo Caldon"
+      }
+    ],
+    "scripts": ["script.js"]
+  }
+}

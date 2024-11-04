@@ -1,0 +1,84 @@
+{
+  "gameData": {
+    "words": [
+      { "word": "GUITARRA", "hint": "Instrumento Musical" },
+      { "word": "ELEFANTE", "hint": "Animal de la selva" },
+      { "word": "TURQUESA", "hint": "Es un color" },
+      { "word": "MARIELA", "hint": "Nombre de mujer" },
+      { "word": "TECLADO", "hint": "Hardware de computadora" },
+      { "word": "INGLATERRA", "hint": "Es un Pais" }
+    ],
+    "maxAttempts": 5
+  },
+  "gameState": {
+    "playedWordsCount": 0,
+    "remainingAttempts": 5,
+    "currentPosition": null,
+    "currentWord": [],
+    "correctLettersCount": 0,
+    "currentWordDivs": [],
+    "lettersToGuess": 0
+  },
+  "actions": {
+    "loadNewWord": {
+      "description": "Loads a new word for the player to guess",
+      "steps": [
+        { "step": "Increase the count of played words" },
+        {
+          "step": "Reset words and hints if all words have been played",
+          "reset": {
+            "words": [
+              { "word": "GUITARRA", "hint": "Instrumento Musical" },
+              { "word": "ELEFANTE", "hint": "Animal de la selva" },
+              { "word": "TURQUESA", "hint": "Es un color" },
+              { "word": "MARIELA", "hint": "Nombre de mujer" },
+              { "word": "TECLADO", "hint": "Hardware de computadora" },
+              { "word": "INGLATERRA", "hint": "Es un Pais" }
+            ]
+          }
+        },
+        { "step": "Select a random position for the new word" },
+        { "step": "Set new word and update letters to guess" },
+        { "step": "Reset correct letters count" },
+        { "step": "Split new word into individual letters" },
+        { "step": "Clear previous word and entered letters display" },
+        { "step": "Generate letter placeholders for the new word" },
+        { "step": "Reset remaining attempts" },
+        { "step": "Display hint for the new word" },
+        { "step": "Remove the selected word and hint from the lists" }
+      ]
+    },
+    "onKeydown": {
+      "description": "Handles user key press events",
+      "steps": [
+        { "step": "Check if the pressed key is a letter" },
+        {
+          "step": "Add entered letter to the display",
+          "condition": "if the letter hasn't been entered already"
+        },
+        { "step": "Check if letter exists in the current word" },
+        {
+          "step": "If correct, reveal letter in placeholder and update count of correct letters",
+          "condition": "if letter is found in current word"
+        },
+        {
+          "step": "If all letters guessed, highlight the word in green",
+          "condition": "if correct letters equal total letters"
+        },
+        {
+          "step": "If incorrect, decrease remaining attempts",
+          "condition": "if letter not found in current word"
+        },
+        {
+          "step": "If out of attempts, highlight the word in red",
+          "condition": "if remaining attempts are 0"
+        },
+        { "step": "Add entered letter to the list of entered letters" }
+      ]
+    },
+    "isLetter": {
+      "description": "Checks if a character is a letter",
+      "regex": "[a-z]"
+    }
+  }
+}
